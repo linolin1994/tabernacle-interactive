@@ -75,7 +75,7 @@
 
       <div class="interactive-stage">
         <span class="hint">Hover · 停留 / 點選 任一編號</span>
-        <svg class="specimen" viewBox="0 0 900 580" width="100%" style="max-width: 880px;" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Tabernacle — cross-section diagram">
+        <svg class="specimen" viewBox="0 0 900 580" width="100%" style="max-width: 880px;" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Tabernacle — side elevation">
 
           <g class="corner">
             <path d="M 40 60 L 40 40 L 60 40"/>
@@ -88,162 +88,202 @@
             <text class="label" x="450" y="50" text-anchor="middle" style="letter-spacing: 0.3em; font-size: 11px;">SPECIMEN · IV</text>
             <line x1="380" y1="60" x2="520" y2="60" stroke="rgba(255,255,255,0.3)" stroke-width="0.5"/>
             <text class="hebrew" x="450" y="80" text-anchor="middle" font-size="15">מִשְׁכָּן</text>
+            <text class="label-small" x="450" y="102" text-anchor="middle" style="font-size: 9px; letter-spacing: 0.18em;">SIDE ELEVATION · 側剖面 · 30 × 10 × 10 CUBITS</text>
           </g>
 
-          <!-- ═══ 01 · OUTER COVERING (tahash skin) ═══ -->
-          <g class="hover-region" tabindex="0"
-             data-zh="外層 · 海狗皮 / 耐用皮" data-en="Outer Covering · Durable Leather"
-             data-desc-zh="最外層的覆蓋是海狗皮（他哈施皮）。從外面看去，會幕不過是塊樸實無華的暗色獸皮 —— 榮美藏在內裡。"
-             data-desc-en="The outermost covering: 'tahash' skin — a tough, weather-resistant leather. From outside, the Tabernacle looked plain. Glory was hidden within."
-             data-ref="出 26:14 · Exodus 26:14">
-            <path class="line" d="M 130 145 L 770 145" stroke-width="2"/>
-            <path class="line-thin" d="M 130 145 L 145 138 M 165 145 L 180 138 M 200 145 L 215 138 M 235 145 L 250 138 M 270 145 L 285 138 M 305 145 L 320 138 M 340 145 L 355 138 M 375 145 L 390 138 M 410 145 L 425 138 M 445 145 L 460 138 M 480 145 L 495 138 M 515 145 L 530 138 M 550 145 L 565 138 M 585 145 L 600 138 M 620 145 L 635 138 M 655 145 L 670 138 M 690 145 L 705 138 M 725 145 L 740 138"/>
-            <g transform="translate(810, 142)">
-              <circle class="marker-bg" r="11"/>
-              <text class="marker-txt" y="3.5" text-anchor="middle">01</text>
+          <!-- West / East orientation -->
+          <g>
+            <text class="label-small" x="160" y="225" text-anchor="middle" style="font-size: 9px;">WEST · 西</text>
+            <text class="label-small" x="740" y="225" text-anchor="middle" style="font-size: 9px;">EAST · 東</text>
+            <g stroke="rgba(255,255,255,0.3)" stroke-width="0.6" fill="none">
+              <path d="M 195 240 L 175 240 M 180 237 L 175 240 L 180 243"/>
+              <path d="M 705 240 L 725 240 M 720 237 L 725 240 L 720 243"/>
             </g>
-            <text class="label-small" x="120" y="143" text-anchor="end">TAHASH</text>
           </g>
 
-          <!-- ═══ 02 · RAM SKINS DYED RED ═══ -->
-          <g class="hover-region" tabindex="0"
-             data-zh="第三層 · 染紅公羊皮" data-en="Ram Skins Dyed Red"
-             data-desc-zh="再下一層是染紅的公羊皮 —— 提醒亞伯拉罕獻以撒時，神所預備的公羊。紅色預表犧牲的血，遮蓋著聖所。"
-             data-desc-en="Ram skins dyed red — a memory of the ram caught in the thicket for Isaac. Red, the colour of blood and substitution, covered the sanctuary."
-             data-ref="出 26:14; 創 22:13 · Exodus 26:14; Gen 22:13">
-            <line class="red-line" x1="130" y1="170" x2="770" y2="170" stroke-width="2"/>
-            <line class="line-faint" x1="135" y1="175" x2="765" y2="175"/>
-            <g transform="translate(810, 170)">
-              <circle class="marker-bg" r="11"/>
-              <text class="marker-txt" y="3.5" text-anchor="middle">02</text>
-            </g>
-            <text class="label-small" x="120" y="172" text-anchor="end">RAM</text>
+          <!-- ═══ Cherubim hints — woven into innermost linen, visible from inside ═══ -->
+          <g pointer-events="none" fill="rgba(241,199,91,0.45)" font-family="serif" font-size="13">
+            <text x="295" y="290" text-anchor="middle">✦</text>
+            <text x="325" y="320" text-anchor="middle">✧</text>
+            <text x="295" y="355" text-anchor="middle">✦</text>
+            <text x="445" y="290" text-anchor="middle">✧</text>
+            <text x="495" y="320" text-anchor="middle">✦</text>
+            <text x="555" y="290" text-anchor="middle">✧</text>
+            <text x="615" y="320" text-anchor="middle">✦</text>
+            <text x="445" y="355" text-anchor="middle">✦</text>
+            <text x="555" y="370" text-anchor="middle">✧</text>
+            <text x="615" y="375" text-anchor="middle">✦</text>
           </g>
 
-          <!-- ═══ 03 · GOAT HAIR ═══ -->
+          <!-- ═══ 06 · VEIL (gold pillars dividing interior) ═══ -->
           <g class="hover-region" tabindex="0"
-             data-zh="第二層 · 山羊毛幔" data-en="Goat Hair Curtains"
-             data-desc-zh="十一幅山羊毛織成的幔子，比內幔多一幅，更長更寬，以遮蓋整座會幕。山羊與贖罪日的代罪羊相連 —— 提醒罪需要被遮蓋。"
-             data-desc-en="Eleven curtains of goat hair, larger than the linen below them, draped over the whole structure. Goat hair recalls the scapegoat of the Day of Atonement."
-             data-ref="出 26:7–13 · Exodus 26:7–13">
-            <line class="line" x1="130" y1="195" x2="770" y2="195"/>
-            <line class="line-thin" x1="135" y1="200" x2="765" y2="200"/>
-            <line class="line-thin" x1="135" y1="205" x2="765" y2="205"/>
-            <g transform="translate(810, 200)">
-              <circle class="marker-bg" r="11"/>
-              <text class="marker-txt" y="3.5" text-anchor="middle">03</text>
-            </g>
-            <text class="label-small" x="120" y="202" text-anchor="end">GOAT</text>
-          </g>
-
-          <!-- ═══ 04 · LINEN INNERMOST (cherubim) ═══ -->
-          <g class="hover-region" tabindex="0"
-             data-zh="內層 · 細麻幔子（基路伯）" data-en="Innermost · Fine Linen with Cherubim"
-             data-desc-zh="最裡層是十幅細麻幔子，用藍、紫、朱紅色線繡上基路伯，巧匠精工製作。內裡盡是天上的圖樣 —— 惟有祭司能看見的榮美。"
-             data-desc-en="Ten innermost curtains of finely twisted linen, with cherubim woven in blue, purple and scarlet thread. Only the priests beheld this beauty inside."
-             data-ref="出 26:1–6 · Exodus 26:1–6">
-            <line class="line" x1="160" y1="230" x2="740" y2="230" stroke-width="1.5"/>
-            <!-- woven cherubim hints -->
-            <g fill="rgba(241,199,91,0.6)" font-family="serif" font-size="14">
-              <text x="220" y="260" text-anchor="middle">✦</text>
-              <text x="290" y="270" text-anchor="middle">✧</text>
-              <text x="360" y="260" text-anchor="middle">✦</text>
-              <text x="430" y="270" text-anchor="middle">✧</text>
-              <text x="500" y="260" text-anchor="middle">✦</text>
-              <text x="570" y="270" text-anchor="middle">✧</text>
-              <text x="640" y="260" text-anchor="middle">✦</text>
-              <text x="710" y="270" text-anchor="middle">✧</text>
-            </g>
-            <line class="line" x1="160" y1="290" x2="740" y2="290" stroke-width="1.5"/>
-            <g transform="translate(810, 260)">
-              <circle class="marker-bg" r="11"/>
-              <text class="marker-txt" y="3.5" text-anchor="middle">04</text>
-            </g>
-            <text class="label-small" x="120" y="262" text-anchor="end">LINEN</text>
-          </g>
-
-          <!-- ═══ 06 · VEIL between Holy / Most Holy ═══ -->
-          <g class="hover-region" tabindex="0"
-             data-zh="幔子 · 隔開聖所與至聖所" data-en="The Veil"
-             data-desc-zh="用藍、紫、朱紅色線並細麻織的幔子，上繡基路伯，掛在四根包金的皂莢木柱上。把會幕分成聖所與至聖所。"
-             data-desc-en="Woven of blue, purple, scarlet and linen, embroidered with cherubim, hung on four gold pillars. Dividing the Holy from the Most Holy."
+             data-zh="幔子 · 隔開聖所與至聖所 (Parokhet)" data-en="The Veil · Parokhet"
+             data-desc-zh="用藍、紫、朱紅色線並細麻織的幔子，上繡基路伯，掛在四根包金的皂莢木柱上；柱安在四個帶卯的銀座上。幔子把會幕分為「聖所」與「至聖所」。"
+             data-desc-en="Woven of blue, purple, scarlet and linen, embroidered with cherubim, hung from four gold-overlaid acacia pillars on four silver bases. Dividing Holy Place from Most Holy."
              data-ref="出 26:31–33 · Exodus 26:31–33">
-            <line class="gold-line" x1="320" y1="295" x2="320" y2="430"/>
+            <line class="gold-line" x1="380" y1="250" x2="380" y2="408" stroke-width="2.5"/>
+            <!-- Pillar tops (2 visible from this side view of 4 total) -->
+            <circle cx="378" cy="250" r="2.6" fill="#f1c75b"/>
+            <circle cx="383" cy="250" r="2.6" fill="#f1c75b"/>
+            <!-- Silver base under pillars -->
+            <rect x="374" y="408" width="13" height="4" fill="rgba(220,225,230,0.85)" stroke="rgba(220,225,230,0.5)" stroke-width="0.4"/>
+            <!-- Veil decoration ticks suggesting cherubim woven in -->
             <g stroke="rgba(241,199,91,0.45)" stroke-width="0.6">
-              <line x1="316" y1="300" x2="324" y2="300"/>
-              <line x1="316" y1="320" x2="324" y2="320"/>
-              <line x1="316" y1="340" x2="324" y2="340"/>
-              <line x1="316" y1="360" x2="324" y2="360"/>
-              <line x1="316" y1="380" x2="324" y2="380"/>
-              <line x1="316" y1="400" x2="324" y2="400"/>
+              <line x1="376" y1="275" x2="384" y2="275"/>
+              <line x1="376" y1="300" x2="384" y2="300"/>
+              <line x1="376" y1="325" x2="384" y2="325"/>
+              <line x1="376" y1="355" x2="384" y2="355"/>
+              <line x1="376" y1="385" x2="384" y2="385"/>
             </g>
-            <text class="hebrew" x="305" y="370" font-size="11">פָּרֹכֶת</text>
-            <g transform="translate(290, 295)">
+            <text class="hebrew" x="392" y="335" font-size="12">פָּרֹכֶת</text>
+            <g transform="translate(380, 234)">
               <circle class="marker-bg" r="11"/>
               <text class="marker-txt" y="3.5" text-anchor="middle">06</text>
             </g>
           </g>
 
-          <!-- ═══ 05 · ACACIA FRAMES + SILVER BASES ═══ -->
+          <!-- ═══ Interior region labels ═══ -->
+          <g pointer-events="none" class="label-small">
+            <text x="320" y="396" text-anchor="middle" style="font-size: 9px;">MOST HOLY</text>
+            <text x="320" y="408" text-anchor="middle" style="font-size: 8.5px;">至聖所 · 10×10</text>
+            <text x="510" y="396" text-anchor="middle" style="font-size: 9px;">HOLY PLACE</text>
+            <text x="510" y="408" text-anchor="middle" style="font-size: 8.5px;">聖所 · 20×10</text>
+          </g>
+
+          <!-- ═══ 05 · ACACIA FRAMES + SILVER BASES + CROSSBAR ═══ -->
           <g class="hover-region" tabindex="0"
-             data-zh="皂莢木骨架 · 包金" data-en="Acacia Frames Overlaid with Gold"
-             data-desc-zh="會幕的骨架由四十八塊立著的皂莢木板組成，皆包金。每塊板下有兩個榫釘，安在銀座上 —— 銀，是贖價之金屬。"
-             data-desc-en="Forty-eight upright acacia frames, each overlaid with gold, set on silver bases. The silver came from the people's atonement money — every frame rested upon redemption."
-             data-ref="出 26:15–25; 38:25–27 · Exodus 26:15–25; 38:25–27">
-            <g stroke="#f1c75b" stroke-width="1.2" fill="none">
-              <rect x="160" y="295" width="8" height="135"/>
-              <rect x="180" y="295" width="8" height="135"/>
-              <rect x="200" y="295" width="8" height="135"/>
-              <rect x="220" y="295" width="8" height="135"/>
-              <rect x="240" y="295" width="8" height="135"/>
-              <rect x="260" y="295" width="8" height="135"/>
-              <rect x="280" y="295" width="8" height="135"/>
-              <rect x="340" y="295" width="8" height="135"/>
-              <rect x="360" y="295" width="8" height="135"/>
-              <rect x="380" y="295" width="8" height="135"/>
-              <rect x="400" y="295" width="8" height="135"/>
-              <rect x="420" y="295" width="8" height="135"/>
-              <rect x="440" y="295" width="8" height="135"/>
-              <rect x="460" y="295" width="8" height="135"/>
-              <rect x="480" y="295" width="8" height="135"/>
-              <rect x="500" y="295" width="8" height="135"/>
-              <rect x="520" y="295" width="8" height="135"/>
-              <rect x="540" y="295" width="8" height="135"/>
-              <rect x="560" y="295" width="8" height="135"/>
-              <rect x="580" y="295" width="8" height="135"/>
-              <rect x="600" y="295" width="8" height="135"/>
-              <rect x="620" y="295" width="8" height="135"/>
-              <rect x="640" y="295" width="8" height="135"/>
-              <rect x="660" y="295" width="8" height="135"/>
-              <rect x="680" y="295" width="8" height="135"/>
-              <rect x="700" y="295" width="8" height="135"/>
-              <rect x="720" y="295" width="8" height="135"/>
+             data-zh="皂莢木骨架 · 包金 · 銀座" data-en="Acacia Frames · Gold · Silver Bases"
+             data-desc-zh="48 塊皂莢木板組成會幕骨架：南北各 20、西側 8。每塊板 10 × 1½ 肘，包金。每塊板下有兩榫，安在銀座上 —— 銀來自百姓贖價，整座會幕立在「贖回」之上。中央有金包橫閂貫穿。"
+             data-desc-en="Forty-eight acacia frames (20 south, 20 north, 8 west), each 10 × 1½ cubits, overlaid with gold. Each rests on two silver sockets from the people's atonement money. A central gold crossbar runs end to end."
+             data-ref="出 26:15–28 · Exodus 26:15–28">
+            <!-- 20 visible gold-overlaid planks (side view of the long wall) -->
+            <g stroke="#f1c75b" stroke-width="1.4" fill="rgba(241,199,91,0.05)">
+              <rect x="240" y="250" width="15" height="158"/>
+              <rect x="258" y="250" width="15" height="158"/>
+              <rect x="276" y="250" width="15" height="158"/>
+              <rect x="294" y="250" width="15" height="158"/>
+              <rect x="312" y="250" width="15" height="158"/>
+              <rect x="330" y="250" width="15" height="158"/>
+              <rect x="348" y="250" width="15" height="158"/>
+              <rect x="386" y="250" width="15" height="158"/>
+              <rect x="404" y="250" width="15" height="158"/>
+              <rect x="422" y="250" width="15" height="158"/>
+              <rect x="440" y="250" width="15" height="158"/>
+              <rect x="458" y="250" width="15" height="158"/>
+              <rect x="476" y="250" width="15" height="158"/>
+              <rect x="494" y="250" width="15" height="158"/>
+              <rect x="512" y="250" width="15" height="158"/>
+              <rect x="530" y="250" width="15" height="158"/>
+              <rect x="548" y="250" width="15" height="158"/>
+              <rect x="566" y="250" width="15" height="158"/>
+              <rect x="584" y="250" width="15" height="158"/>
+              <rect x="602" y="250" width="15" height="158"/>
+              <rect x="620" y="250" width="15" height="158"/>
             </g>
-            <!-- Silver bases -->
-            <rect class="line silver" x="150" y="432" width="580" height="6"/>
-            <g transform="translate(810, 365)">
+            <!-- Central crossbar (Ex 26:28) running through the planks -->
+            <line x1="234" y1="332" x2="640" y2="332" stroke="#f1c75b" stroke-width="1.4" opacity="0.85"/>
+            <line x1="234" y1="335" x2="640" y2="335" stroke="#8b6e1e" stroke-width="0.6" opacity="0.6"/>
+            <!-- Silver bases bar -->
+            <rect x="234" y="408" width="402" height="6" fill="rgba(220,225,230,0.9)" stroke="rgba(220,225,230,0.5)" stroke-width="0.5"/>
+            <!-- Ground line -->
+            <line x1="190" y1="416" x2="690" y2="416" stroke="rgba(255,255,255,0.18)" stroke-width="0.5" stroke-dasharray="3 3"/>
+            <g transform="translate(140, 330)">
               <circle class="marker-bg" r="11"/>
               <text class="marker-txt" y="3.5" text-anchor="middle">05</text>
             </g>
-            <text class="label-small" x="120" y="367" text-anchor="end">FRAMES</text>
+            <text class="label-small" x="120" y="333" text-anchor="end" style="font-size: 9px;">FRAMES</text>
           </g>
 
-          <!-- Ground reference -->
-          <line x1="100" y1="445" x2="800" y2="445" stroke="rgba(255,255,255,0.2)" stroke-width="0.5" stroke-dasharray="3 3"/>
-
-          <!-- Region labels (light annotations) -->
-          <g class="label-small">
-            <text x="245" y="460" text-anchor="middle">MOST HOLY · 至聖所</text>
-            <text x="525" y="460" text-anchor="middle">HOLY PLACE · 聖所</text>
+          <!-- ═══ 04 · LINEN (innermost — ribbon at frame top + inside lining) ═══ -->
+          <g class="hover-region" tabindex="0"
+             data-zh="內層 · 細麻幔子 · 十幅繡基路伯" data-en="Innermost · Linen with Cherubim"
+             data-desc-zh="十幅細麻幔子，每幅 28 × 4 肘，用藍、紫、朱紅色線繡基路伯。兩組各五幅相連，再以五十個金鉤連成一個整體，掛在帳幕骨架的內側 —— 從外看不見，惟祭司能見其華美。"
+             data-desc-en="Ten linen curtains (28×4 cubits each), embroidered with cherubim in blue, purple, scarlet. Two sets of five joined by fifty gold clasps into one tabernacle. Lined the interior — only the priests beheld this beauty."
+             data-ref="出 26:1–6 · Exodus 26:1–6">
+            <line class="line" x1="240" y1="246" x2="640" y2="246" stroke-width="2"/>
+            <line class="line-thin" x1="240" y1="251" x2="640" y2="251"/>
+            <g transform="translate(140, 247)">
+              <circle class="marker-bg" r="11"/>
+              <text class="marker-txt" y="3.5" text-anchor="middle">04</text>
+            </g>
+            <text class="label-small" x="120" y="250" text-anchor="end" style="font-size: 9px;">LINEN</text>
           </g>
 
-          <!-- Scale bar -->
+          <!-- ═══ 03 · GOAT HAIR (one cubit overhang each side) ═══ -->
+          <g class="hover-region" tabindex="0"
+             data-zh="第三層 · 山羊毛幔 · 十一幅" data-en="Goat Hair · Eleven Curtains"
+             data-desc-zh="十一幅山羊毛織成的幔子，每幅 30 × 4 肘 —— 比內幔多一幅、也較長。前面摺一幅，後面下垂半幅；兩旁各餘一肘，遮蓋下面的細麻幔。"
+             data-desc-en="Eleven goat-hair curtains (30×4 cubits) — one more, and longer, than the linen. Folded double at the front, a half-curtain hanging at the rear; one cubit overhanging on each side to cover the linen below."
+             data-ref="出 26:7–13 · Exodus 26:7–13">
+            <path d="M 226 230 L 226 422 M 230 226 L 650 226 M 654 230 L 654 422" stroke="#7a6845" stroke-width="2.2" fill="none" stroke-linejoin="round" stroke-linecap="round"/>
+            <line x1="232" y1="231" x2="648" y2="231" stroke="#5a4e34" stroke-width="0.8" opacity="0.7"/>
+            <g transform="translate(140, 229)">
+              <circle class="marker-bg" r="11"/>
+              <text class="marker-txt" y="3.5" text-anchor="middle">03</text>
+            </g>
+            <text class="label-small" x="120" y="232" text-anchor="end" style="font-size: 9px;">GOAT</text>
+          </g>
+
+          <!-- ═══ 02 · RAM SKINS DYED RED ═══ -->
+          <g class="hover-region" tabindex="0"
+             data-zh="第二層 · 染紅公羊皮" data-en="Ram Skins Dyed Red"
+             data-desc-zh="再上一層是染紅的公羊皮 —— 提醒亞伯拉罕獻以撒時，神所預備的公羊（創 22:13）。紅色預表犧牲的血，遮蓋著聖所。"
+             data-desc-en="Above the goat hair, ram skins dyed red — recalling the ram caught in the thicket for Isaac (Gen 22:13). Red, the colour of blood, covered the sanctuary."
+             data-ref="出 26:14a · Exodus 26:14a">
+            <path d="M 218 214 L 218 428 M 222 210 L 658 210 M 662 214 L 662 428" stroke="#a13030" stroke-width="2.2" fill="none" stroke-linejoin="round" stroke-linecap="round"/>
+            <line x1="222" y1="215" x2="658" y2="215" stroke="#6b1f1f" stroke-width="0.8" opacity="0.7"/>
+            <g transform="translate(140, 212)">
+              <circle class="marker-bg" r="11"/>
+              <text class="marker-txt" y="3.5" text-anchor="middle">02</text>
+            </g>
+            <text class="label-small" x="120" y="215" text-anchor="end" style="font-size: 9px;">RAM</text>
+          </g>
+
+          <!-- ═══ 01 · TAHASH (outermost) ═══ -->
+          <g class="hover-region" tabindex="0"
+             data-zh="外層 · 海狗皮 (Tahash)" data-en="Outermost · Durable Leather"
+             data-desc-zh="最外層是耐用的他哈施皮（海狗皮 / 海牛皮）。從外面看去，會幕不過是塊樸實無華的暗色獸皮 —— 榮美藏在內裡。"
+             data-desc-en="The outermost covering: 'tahash' skin — tough, weather-resistant. From outside the Tabernacle looked plain. Glory was hidden within."
+             data-ref="出 26:14b · Exodus 26:14b">
+            <path d="M 210 198 L 210 434 M 214 194 L 666 194 M 670 198 L 670 434" stroke="rgba(60,52,40,0.95)" stroke-width="2.6" fill="none" stroke-linejoin="round" stroke-linecap="round"/>
+            <line x1="214" y1="199" x2="666" y2="199" stroke="rgba(30,26,20,0.95)" stroke-width="0.8" opacity="0.7"/>
+            <g transform="translate(140, 196)">
+              <circle class="marker-bg" r="11"/>
+              <text class="marker-txt" y="3.5" text-anchor="middle">01</text>
+            </g>
+            <text class="label-small" x="120" y="199" text-anchor="end" style="font-size: 9px;">TAHASH</text>
+          </g>
+
+          <!-- ═══ 07 · EAST ENTRANCE — 5 gold pillars on bronze bases ═══ -->
+          <g class="hover-region" tabindex="0"
+             data-zh="帳幕門簾 · 東面五金柱" data-en="Entrance · Five Gold Pillars (East)"
+             data-desc-zh="帳幕東面入口由五根包金的皂莢木柱組成（柱上有金鉤），安在五個銅座上。掛著藍、紫、朱紅線並細麻繡花的門簾。"
+             data-desc-en="The east entrance had five acacia pillars overlaid with gold (gold hooks atop), set on five bronze bases. An embroidered curtain of blue, purple, scarlet and linen hung from them."
+             data-ref="出 26:36–37 · Exodus 26:36–37">
+            <g stroke="#f1c75b" stroke-width="2" fill="rgba(241,199,91,0.12)">
+              <line x1="644" y1="250" x2="644" y2="408"/>
+              <line x1="651" y1="250" x2="651" y2="408"/>
+            </g>
+            <circle cx="644" cy="248" r="2.4" fill="#f1c75b"/>
+            <circle cx="651" cy="248" r="2.4" fill="#f1c75b"/>
+            <rect x="640" y="408" width="15" height="4" fill="#c87b3a"/>
+            <g transform="translate(686, 322)">
+              <circle class="marker-bg" r="11"/>
+              <text class="marker-txt" y="3.5" text-anchor="middle">07</text>
+            </g>
+            <text class="label-small" x="700" y="346" style="font-size: 9px;">ENTRANCE · 門</text>
+          </g>
+
+          <!-- Scale bar (10 + 20 cubit split shown) -->
           <g stroke="rgba(255, 255, 255, 0.3)" stroke-width="0.5">
-            <line x1="160" y1="490" x2="730" y2="490"/>
-            <line x1="160" y1="484" x2="160" y2="496"/>
-            <line x1="730" y1="484" x2="730" y2="496"/>
+            <line x1="240" y1="460" x2="640" y2="460"/>
+            <line x1="240" y1="454" x2="240" y2="466"/>
+            <line x1="380" y1="454" x2="380" y2="466"/>
+            <line x1="640" y1="454" x2="640" y2="466"/>
           </g>
-          <text class="label" x="450" y="508" text-anchor="middle">30 × 10 × 10 · CUBITS</text>
+          <text class="label" x="310" y="478" text-anchor="middle" style="font-size: 9px;">10 CUBITS</text>
+          <text class="label" x="510" y="478" text-anchor="middle" style="font-size: 9px;">20 CUBITS</text>
+          <text class="label" x="450" y="500" text-anchor="middle">TOTAL LENGTH · 30 CUBITS · ~14M</text>
 
         </svg>
       </div>
@@ -260,27 +300,111 @@
     <section class="section" id="scripture">
       <div class="section-header">
         <h2>經文 · Scripture</h2>
-        <span class="ref">出埃及記 26 (節選)</span>
+        <span class="ref">出埃及記 26 (全 37 節)</span>
       </div>
       <div class="bilingual scripture">
         <div>
-          <h4>中文 · 和合本／當代</h4>
+          <h4>中文 · 和合本</h4>
           <p>
-            <span class="verse-num">1</span>你要用十幅幔子做帳幕；這些幔子要用撚的細麻和藍色、紫色、朱紅色線製造，並用巧匠的手工繡上基路伯。
+            <span class="verse-num">1</span>你要用十幅幔子做帳幕。這些幔子要用撚的細麻和藍色、紫色、朱紅色線製造，並用巧匠的手工繡上基路伯。
+            <span class="verse-num">2</span>每幅幔子要長二十八肘，寬四肘，幔子都要一樣的尺寸。
+            <span class="verse-num">3</span>這五幅幔子要幅幅相連；那五幅幔子也要幅幅相連。
+            <span class="verse-num">4</span>在這相連的幔子末幅邊上要做藍色的鈕扣；在那相連的幔子末幅邊上也要照樣做。
+            <span class="verse-num">5</span>要在這相連的幔子上做五十個鈕扣；在那相連的幔子上也做五十個鈕扣，都要兩兩相對。
+            <span class="verse-num">6</span>又要做五十個金鉤，用鉤使幔子相連，這才成了一個帳幕。
+          </p>
+          <p style="margin-top: 0.8rem;">
             <span class="verse-num">7</span>你要用山羊毛織十一幅幔子，作為帳幕以上的罩棚。
+            <span class="verse-num">8</span>每幅幔子要長三十肘，寬四肘；十一幅幔子都要一樣的尺寸。
+            <span class="verse-num">9</span>要把五幅幔子連成一幅，又把六幅幔子連成一幅，這第六幅幔子要在罩棚的前面摺上去。
+            <span class="verse-num">10</span>在這相連的幔子末幅邊上要做五十個鈕扣；在那相連的幔子末幅邊上也做五十個鈕扣。
+            <span class="verse-num">11</span>又要做五十個銅鉤，鉤在鈕扣中，使罩棚連成一個。
+            <span class="verse-num">12</span>罩棚的幔子所餘那垂下來的半幅幔子，要垂在帳幕的後頭。
+            <span class="verse-num">13</span>罩棚的幔子所餘長的，這邊一肘，那邊一肘，要垂在帳幕的兩旁，遮蓋帳幕。
             <span class="verse-num">14</span>又要用染紅的公羊皮做罩棚的蓋；再用海狗皮做一層罩棚上的頂蓋。
+          </p>
+          <p style="margin-top: 0.8rem;">
             <span class="verse-num">15</span>你要用皂莢木做帳幕的豎板。
+            <span class="verse-num">16</span>每塊要長十肘，寬一肘半；
+            <span class="verse-num">17</span>每塊必有兩榫相對。帳幕一切的板都要這樣做。
+            <span class="verse-num">18</span>帳幕的南面要做板二十塊。
+            <span class="verse-num">19</span>在這二十塊板底下要做四十個帶卯的銀座，兩卯接這塊板上的兩榫，兩卯接那塊板上的兩榫。
+            <span class="verse-num">20</span>帳幕第二面，就是北面，也要做板二十塊
+            <span class="verse-num">21</span>和帶卯的銀座四十個；這板底下有兩卯，那板底下也有兩卯。
+            <span class="verse-num">22</span>帳幕的後面，就是西面，要做板六塊。
+            <span class="verse-num">23</span>帳幕後面的拐角要做板兩塊。
+            <span class="verse-num">24</span>板的下半截要雙的，上半截要整的，直頂到第一個環子；兩塊都要這樣做兩個拐角。
+            <span class="verse-num">25</span>必有八塊板和十六個帶卯的銀座；這板底下有兩卯，那板底下也有兩卯。
+          </p>
+          <p style="margin-top: 0.8rem;">
+            <span class="verse-num">26</span>你要用皂莢木做閂：為帳幕這面的板做五閂，
+            <span class="verse-num">27</span>為帳幕那面的板做五閂，又為帳幕後面的板做五閂。
+            <span class="verse-num">28</span>板腰間的中閂要從這一頭通到那一頭。
+            <span class="verse-num">29</span>板要用金子包裹，又要做板上的金環套閂；閂也要用金子包裹。
+            <span class="verse-num">30</span>要照著在山上指示你的樣式立起帳幕。
+          </p>
+          <p style="margin-top: 0.8rem;">
+            <span class="verse-num">31</span>你要用藍色、紫色、朱紅色線，和撚的細麻織幔子，以巧匠的手工繡上基路伯。
+            <span class="verse-num">32</span>要把幔子掛在四根包金的皂莢木柱子上，柱子上當有金鉤，柱子安在四個帶卯的銀座上。
             <span class="verse-num">33</span>要使幔子垂在鉤子下，把法櫃抬進幔子內；這幔子要將聖所和至聖所隔開。
+            <span class="verse-num">34</span>又要把施恩座安在至聖所內的法櫃上，
+            <span class="verse-num">35</span>把桌子安在幔子外帳幕的北面；把燈臺安在帳幕的南面，彼此相對。
+          </p>
+          <p style="margin-top: 0.8rem;">
+            <span class="verse-num">36</span>你要拿藍色、紫色、朱紅色線，和撚的細麻，用繡花的手工織帳幕的門簾。
+            <span class="verse-num">37</span>要用皂莢木為簾子做五根柱子，用金子包裹。柱子上當有金鉤；又要為柱子用銅鑄造五個帶卯的座。
           </p>
         </div>
         <div>
           <h4>English · NIV</h4>
           <p>
-            <span class="verse-num">1</span>"Make the tabernacle with ten curtains of finely twisted linen and blue, purple and scarlet yarn, with cherubim woven into them.
-            <span class="verse-num">7</span>Make curtains of goat hair for the tent over the tabernacle—eleven altogether.
+            <span class="verse-num">1</span>"Make the tabernacle with ten curtains of finely twisted linen and blue, purple and scarlet yarn, with cherubim woven into them by a skilled worker.
+            <span class="verse-num">2</span>All the curtains are to be the same size—twenty-eight cubits long and four cubits wide.
+            <span class="verse-num">3</span>Join five of the curtains together, and do the same with the other five.
+            <span class="verse-num">4</span>Make loops of blue material along the edge of the end curtain in one set, and do the same with the end curtain in the other set.
+            <span class="verse-num">5</span>Make fifty loops on one curtain and fifty loops on the end curtain of the other set, with the loops opposite each other.
+            <span class="verse-num">6</span>Then make fifty gold clasps and use them to fasten the curtains together so that the tabernacle is a unit.
+          </p>
+          <p style="margin-top: 0.8rem;">
+            <span class="verse-num">7</span>"Make curtains of goat hair for the tent over the tabernacle—eleven altogether.
+            <span class="verse-num">8</span>All eleven curtains are to be the same size—thirty cubits long and four cubits wide.
+            <span class="verse-num">9</span>Join five of the curtains together into one set and the other six into another set. Fold the sixth curtain double at the front of the tent.
+            <span class="verse-num">10</span>Make fifty loops along the edge of the end curtain in one set and also along the edge of the end curtain in the other set.
+            <span class="verse-num">11</span>Then make fifty bronze clasps and put them in the loops to fasten the tent together as a unit.
+            <span class="verse-num">12</span>As for the additional length of the tent curtains, the half curtain that is left over is to hang down at the rear of the tabernacle.
+            <span class="verse-num">13</span>The tent curtains will be a cubit longer on both sides; what is left will hang over the sides of the tabernacle so as to cover it.
             <span class="verse-num">14</span>Make for the tent a covering of ram skins dyed red, and over that a covering of the other durable leather.
-            <span class="verse-num">15</span>Make upright frames of acacia wood for the tabernacle.
-            <span class="verse-num">33</span>Hang the curtain from the clasps and place the ark behind the curtain. The curtain will separate the Holy Place from the Most Holy Place."
+          </p>
+          <p style="margin-top: 0.8rem;">
+            <span class="verse-num">15</span>"Make upright frames of acacia wood for the tabernacle.
+            <span class="verse-num">16</span>Each frame is to be ten cubits long and a cubit and a half wide,
+            <span class="verse-num">17</span>with two projections set parallel to each other. Make all the frames of the tabernacle in this way.
+            <span class="verse-num">18</span>Make twenty frames for the south side of the tabernacle
+            <span class="verse-num">19</span>and make forty silver bases to go under them—two bases for each frame, one under each projection.
+            <span class="verse-num">20</span>For the other side, the north side of the tabernacle, make twenty frames
+            <span class="verse-num">21</span>and forty silver bases—two under each frame.
+            <span class="verse-num">22</span>Make six frames for the far end, that is, the west end of the tabernacle,
+            <span class="verse-num">23</span>and make two frames for the corners at the far end.
+            <span class="verse-num">24</span>At these two corners they must be double from the bottom all the way to the top and fitted into a single ring; both shall be like that.
+            <span class="verse-num">25</span>So there will be eight frames and sixteen silver bases—two under each frame.
+          </p>
+          <p style="margin-top: 0.8rem;">
+            <span class="verse-num">26</span>"Also make crossbars of acacia wood: five for the frames on one side of the tabernacle,
+            <span class="verse-num">27</span>five for those on the other side, and five for the frames on the west, at the far end of the tabernacle.
+            <span class="verse-num">28</span>The center crossbar is to extend from end to end at the middle of the frames.
+            <span class="verse-num">29</span>Overlay the frames with gold and make gold rings to hold the crossbars. Also overlay the crossbars with gold.
+            <span class="verse-num">30</span>"Set up the tabernacle according to the plan shown you on the mountain.
+          </p>
+          <p style="margin-top: 0.8rem;">
+            <span class="verse-num">31</span>"Make a curtain of blue, purple and scarlet yarn and finely twisted linen, with cherubim woven into it by a skilled worker.
+            <span class="verse-num">32</span>Hang it with gold hooks on four posts of acacia wood overlaid with gold and standing on four silver bases.
+            <span class="verse-num">33</span>Hang the curtain from the clasps and place the ark of the covenant law behind the curtain. The curtain will separate the Holy Place from the Most Holy Place.
+            <span class="verse-num">34</span>Put the atonement cover on the ark of the covenant law in the Most Holy Place.
+            <span class="verse-num">35</span>Place the table outside the curtain on the north side of the tabernacle and put the lampstand opposite it on the south side.
+          </p>
+          <p style="margin-top: 0.8rem;">
+            <span class="verse-num">36</span>"For the entrance to the tent make a curtain of blue, purple and scarlet yarn and finely twisted linen—the work of an embroiderer.
+            <span class="verse-num">37</span>Make gold hooks for this curtain and five posts of acacia wood overlaid with gold. And cast five bronze bases for them."
           </p>
         </div>
       </div>
