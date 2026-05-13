@@ -1401,6 +1401,31 @@ h3 {
   .cover-footer { padding: 32px 18px; font-size: 0.62rem; }
 }
 
+/* ═══════════════════════════════════════════════════════
+   📐 SPECIMEN — Museum diagram global overrides
+   (Bumps label sizes so they read clearly across all pages)
+   ═══════════════════════════════════════════════════════ */
+.specimen .label       { font-size: 13px !important; letter-spacing: 0.18em !important; }
+.specimen .label-small { font-size: 11px !important; letter-spacing: 0.14em !important; }
+.specimen .label-tag   { font-size: 12px !important; letter-spacing: 0.14em !important; }
+.specimen .label-tribe { font-size: 11px !important; }
+.specimen .tribe-name  { font-size: 11px !important; }
+.specimen .hebrew      { font-size: 17px !important; }
+.specimen .marker-bg   { r: 13; }
+.specimen text[font-size="9"]  { font-size: 12px !important; }
+.specimen text[font-size="10"] { font-size: 13px !important; }
+.specimen text[font-size="11"] { font-size: 14px !important; }
+.specimen text[font-size="14"] { font-size: 17px !important; }
+.specimen text[font-size="15"] { font-size: 18px !important; }
+
+@media (max-width: 640px) {
+  .specimen .label       { font-size: 11px !important; }
+  .specimen .label-small { font-size: 10px !important; }
+  .specimen .label-tag   { font-size: 10px !important; }
+  .specimen .label-tribe,
+  .specimen .tribe-name  { font-size: 9px !important; }
+}
+
 /* SVG flame/glow animations */
 @keyframes flicker {
   0%, 100% { opacity: 1; }
