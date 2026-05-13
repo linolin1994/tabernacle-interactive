@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#000000" />
+  <title>Bible Atlas · 聖經互動圖典系列</title>
+  <meta name="description" content="Interactive bilingual specimens from Scripture — Mishkan, the Temple, the New Jerusalem, and more." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .volume-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 18px;
+      margin-top: 40px;
+    }
+    .volume-card {
+      position: relative;
+      background: var(--glass-bg);
+      backdrop-filter: blur(28px) saturate(150%);
+      -webkit-backdrop-filter: blur(28px) saturate(150%);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--radius-card);
+      padding: 36px 32px 28px;
+      text-decoration: none;
+      color: var(--frost);
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      transition: transform 0.45s cubic-bezier(0.22, 0.61, 0.36, 1),
+                  border-color 0.35s, background 0.35s;
+      overflow: hidden;
+      isolation: isolate;
+    }
+    .volume-card.released::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 0% 0%, rgba(241, 199, 91, 0.14), transparent 60%);
+      opacity: 0;
+      transition: opacity 0.5s;
+      z-index: -1;
+    }
+    .volume-card.released:hover {
+      transform: translateY(-6px);
+      border-color: var(--glass-border-strong);
+      background: var(--glass-bg-hover);
+    }
+    .volume-card.released:hover::before { opacity: 1; }
+    .volume-card.upcoming {
+      cursor: default;
+      opacity: 0.62;
+    }
+    .volume-card.upcoming:hover {
+      opacity: 0.85;
+      border-color: rgba(255, 255, 255, 0.18);
+    }
+    .volume-card .roman {
+      font-family: var(--font-display);
+      color: var(--gold-bright);
+      font-size: 0.74rem;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+    }
+    .volume-card.upcoming .roman {
+      color: rgba(255, 255, 255, 0.4);
+    }
+    .volume-card .title {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: clamp(1.6rem, 3.2vw, 2.2rem);
+      line-height: 1.12;
+      font-weight: 400;
+      color: var(--frost);
+      margin-top: 4px;
+    }
+    .volume-card .zh {
+      font-family: var(--font-zh);
+      font-size: 1.05rem;
+      color: rgba(255, 255, 255, 0.62);
+      margin-top: 2px;
+    }
+    .volume-card .ref {
+      font-family: var(--font-display);
+      font-size: 0.75rem;
+      letter-spacing: 0.16em;
+      color: rgba(255, 255, 255, 0.55);
+      margin-top: 12px;
+    }
+    .volume-card .desc {
+      margin-top: 14px;
+      font-size: 0.88rem;
+      line-height: 1.6;
+      color: rgba(255, 255, 255, 0.7);
+    }
+    .volume-card .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 18px;
+      padding: 6px 14px;
+      border-radius: var(--radius-pill);
+      font-family: var(--font-display);
+      font-size: 0.7rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      width: fit-content;
+      border: 1px solid var(--glass-border);
+    }
+    .volume-card.released .status {
+      color: var(--gold-bright);
+      border-color: var(--glass-border-strong);
+      background: rgba(241, 199, 91, 0.08);
+    }
+    .volume-card.released .status::before {
+      content: '';
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--gold-bright);
+      box-shadow: 0 0 10px var(--gold-bright);
+      animation: pulse-dot 2s ease-in-out infinite;
+    }
+    .volume-card.upcoming .status {
+      color: rgba(255, 255, 255, 0.4);
+    }
+    .volume-card .arrow {
+      position: absolute;
+      bottom: 26px;
+      right: 30px;
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      color: var(--gold-bright);
+      opacity: 0;
+      transition: opacity 0.4s, transform 0.4s;
+    }
+    .volume-card.released:hover .arrow {
+      opacity: 1;
+      transform: translate(4px, -4px);
+    }
+    @media (max-width: 640px) {
+      .volume-card { padding: 26px 22px 22px; }
+      .volume-card .arrow { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="series.html" class="brand"><span class="brand-mark">✦</span><span>Bible Atlas</span></a>
+      <ul class="nav-links">
+        <li><a href="series.html">Series</a></li>
+        <li><a href="index.html">Volume I · Mishkan</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <section class="cover" style="min-height: 80vh;">
+    <div class="aurora-field" aria-hidden="true">
+      <div class="blob b1"></div>
+      <div class="blob b2"></div>
+      <div class="blob b3"></div>
+      <div class="blob b4"></div>
+    </div>
+
+    <div class="cover-meta">
+      <span>INTERACTIVE BIBLE STUDIES</span>
+      <span>SERIES · 系列</span>
+    </div>
+
+    <h1 class="display-massive" aria-label="Bible Atlas" style="font-size: clamp(2.6rem, 12vw, 9rem);">
+      <span class="ltr" style="animation-delay: 0.04s;">B</span><span class="ltr" style="animation-delay: 0.10s;">i</span><span class="ltr" style="animation-delay: 0.16s;">b</span><span class="ltr" style="animation-delay: 0.22s;">l</span><span class="ltr" style="animation-delay: 0.28s;">e</span><span style="display: inline-block; width: 0.4em;"></span><span class="ltr" style="animation-delay: 0.40s;">A</span><span class="ltr" style="animation-delay: 0.46s;">t</span><span class="ltr" style="animation-delay: 0.52s;">l</span><span class="ltr" style="animation-delay: 0.58s;">a</span><span class="ltr" style="animation-delay: 0.64s;">s</span>
+    </h1>
+    <p class="display-italic">Interactive Specimens from Scripture</p>
+
+    <p class="cover-sub">
+      An ongoing series of bilingual, museum-style interactive guides through Scripture.<br>
+      聖經中可被「看見」的部分 — 會幕、聖殿、新耶路撒冷 — 以互動圖典的方式重現。
+    </p>
+
+    <div class="scroll-cue">
+      <span>Volumes</span>
+      <span class="line"></span>
+    </div>
+  </section>
+
+  <section class="directory">
+    <div class="directory-head">
+      <h2>The Volumes</h2>
+      <span class="label">已釋出 1 卷 · 規劃中 6 卷</span>
+    </div>
+
+    <div class="volume-grid">
+
+      <a class="volume-card released" href="index.html">
+        <span class="roman">Volume I</span>
+        <span class="title">Mishkan</span>
+        <span class="zh">會幕 · The Tabernacle</span>
+        <span class="ref">Exodus 25–28 · 出埃及記</span>
+        <p class="desc">十個互動圖頁：約櫃、施恩座、陳設餅桌、金燈臺、會幕骨架、燔祭壇、外院、長明燈油、以弗得、決斷胸牌、祭司聖服 —— 全文經文、希伯來原文、視覺參考圖。</p>
+        <span class="status">Released · 已上線</span>
+        <span class="arrow">↗</span>
+      </a>
+
+      <article class="volume-card upcoming">
+        <span class="roman">Volume II</span>
+        <span class="title">The Temple</span>
+        <span class="zh">所羅門聖殿</span>
+        <span class="ref">1 Kings 6–7 · 列王紀上</span>
+        <p class="desc">會幕的升級版 —— 金牆、銅海、二基路伯展翅蔭蓋至聖所、十個金燈臺、橡木雕刻 —— 七年建成的聖殿。</p>
+        <span class="status">Upcoming · 規劃中</span>
+      </article>
+
+      <article class="volume-card upcoming">
+        <span class="roman">Volume III</span>
+        <span class="title">The New Jerusalem</span>
+        <span class="zh">新耶路撒冷</span>
+        <span class="ref">Revelation 21–22 · 啟示錄</span>
+        <p class="desc">天上來的聖城：十二門十二根基、生命河、生命樹、純金街、十二寶石、立方體的城。會幕、聖殿的終局之像。</p>
+        <span class="status">Upcoming · 規劃中</span>
+      </article>
+
+      <article class="volume-card upcoming">
+        <span class="roman">Volume IV</span>
+        <span class="title">The Day of Atonement</span>
+        <span class="zh">贖罪日 · Yom Kippur</span>
+        <span class="ref">Leviticus 16 · 利未記</span>
+        <p class="desc">一年一次大祭司進至聖所的那一日 —— 公牛、兩隻山羊、贖罪羊、阿撒瀉勒、彈血、香、雲。</p>
+        <span class="status">Upcoming · 規劃中</span>
+      </article>
+
+      <article class="volume-card upcoming">
+        <span class="roman">Volume V</span>
+        <span class="title">The Passover</span>
+        <span class="zh">逾越節</span>
+        <span class="ref">Exodus 12 · 出埃及記</span>
+        <p class="desc">無酵餅、無瑕疵的羔羊、抹在門楣的血、束腰繫鞋拿杖、急速吃 —— 出埃及之夜，立約的家庭儀式。</p>
+        <span class="status">Upcoming · 規劃中</span>
+      </article>
+
+      <article class="volume-card upcoming">
+        <span class="roman">Volume VI</span>
+        <span class="title">The Twelve Tribes</span>
+        <span class="zh">以色列十二支派 · 營盤</span>
+        <span class="ref">Numbers 2 · 民數記</span>
+        <p class="desc">以會幕為中心的十二支派旗幟陣 —— 東猶大、西以法蓮、南流便、北但 —— 每支派各有顏色與徽號。</p>
+        <span class="status">Upcoming · 規劃中</span>
+      </article>
+
+      <article class="volume-card upcoming">
+        <span class="roman">Volume VII</span>
+        <span class="title">The Ark of Noah</span>
+        <span class="zh">挪亞方舟</span>
+        <span class="ref">Genesis 6–9 · 創世記</span>
+        <p class="desc">三百肘長、五十肘寬、三十肘高的木櫃 —— 三層、一扇窗、一扇門。歷時 150 日的審判之水與救恩之船。</p>
+        <span class="status">Upcoming · 規劃中</span>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="manifesto">
+    <blockquote>
+      The whole earth is full of his glory ⋯ everything that has breath, praise the Lord.
+      <span class="attribution">— Isaiah 6:3; Psalm 150:6</span>
+      <p class="zh">「祂的榮光充滿全地 ⋯ 凡有氣息的都要讚美耶和華。」</p>
+    </blockquote>
+  </section>
+
+  <footer class="cover-footer">
+    <span>© Bible Atlas · Interactive Specimens from Scripture</span>
+    <span>Built with care · 雙語對照</span>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
