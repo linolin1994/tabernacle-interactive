@@ -53,20 +53,20 @@
     panel.classList.add('fadein');
 
     panel.innerHTML = `
-      <div class="label">細節 · Detail</div>
+      <div class="label">經文 · Scripture</div>
       <h3>${data.zh || ''}</h3>
       <span class="en-name">${data.en || ''}</span>
       <div class="detail-body">
         <div>
-          <h5>說明 · 中文</h5>
+          <h5>和合本 · 中文</h5>
           <p>${data.descZh || ''}</p>
         </div>
         <div>
-          <h5>Description · English</h5>
+          <h5>NIV · English</h5>
           <p>${data.descEn || ''}</p>
         </div>
       </div>
-      ${data.ref ? `<a class="scripture-ref" href="${data.refLink || '#scripture'}">${data.ref}</a>` : ''}
+      ${data.ref ? `<a class="scripture-ref" href="${data.refLink || '#scripture'}">↓ ${data.ref}</a>` : ''}
     `;
   }
 
