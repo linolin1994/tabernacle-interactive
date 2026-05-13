@@ -1,0 +1,5 @@
+.DS_Store
+.omc/
+*.log
+node_modules/
+.env
