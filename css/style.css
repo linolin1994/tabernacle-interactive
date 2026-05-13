@@ -1402,6 +1402,101 @@ h3 {
 }
 
 /* ═══════════════════════════════════════════════════════
+   🖼️ PLATE — Museum image / video showcase
+   ═══════════════════════════════════════════════════════ */
+
+.plate {
+  background: var(--glass-bg);
+  backdrop-filter: blur(28px) saturate(150%);
+  -webkit-backdrop-filter: blur(28px) saturate(150%);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  margin: 0;
+  position: relative;
+  transition: border-color 0.45s;
+}
+.plate:hover { border-color: var(--glass-border-strong); }
+
+.plate .plate-media {
+  position: relative;
+  background: var(--bg-deeper);
+  overflow: hidden;
+}
+.plate .plate-media::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  pointer-events: none;
+}
+
+.plate .plate-image,
+.plate video {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 640px;
+  object-fit: contain;
+  background: var(--bg-deeper);
+}
+
+.plate video { outline: none; }
+
+.plate figcaption {
+  display: flex;
+  align-items: flex-start;
+  gap: 28px;
+  padding: 24px 32px;
+  border-top: 1px solid var(--glass-border);
+}
+
+.plate figcaption .plate-label {
+  font-family: var(--font-display);
+  font-size: 0.74rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold-bright);
+  flex-shrink: 0;
+  padding-top: 4px;
+  white-space: nowrap;
+}
+
+.plate figcaption .plate-body { flex: 1; }
+
+.plate figcaption p {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.82);
+  line-height: 1.55;
+}
+
+.plate figcaption .meta {
+  display: block;
+  margin-top: 6px;
+  font-family: var(--font-display);
+  font-style: normal;
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.plate figcaption a {
+  color: var(--gold-bright);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(241, 199, 91, 0.4);
+  transition: border-color 0.25s;
+}
+.plate figcaption a:hover { border-color: var(--gold-bright); }
+
+@media (max-width: 640px) {
+  .plate figcaption { flex-direction: column; gap: 8px; padding: 18px 22px; }
+  .plate figcaption p { font-size: 0.95rem; }
+}
+
+/* ═══════════════════════════════════════════════════════
    🎬 FILM-POSTER REFERENCE BANNER
    ═══════════════════════════════════════════════════════ */
 
