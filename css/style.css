@@ -1402,6 +1402,107 @@ h3 {
 }
 
 /* ═══════════════════════════════════════════════════════
+   🎬 REFERENCE / EXTERNAL LINK CARD
+   ═══════════════════════════════════════════════════════ */
+
+.ref-card {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 24px;
+  background: var(--glass-bg);
+  backdrop-filter: blur(28px) saturate(150%);
+  -webkit-backdrop-filter: blur(28px) saturate(150%);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-card);
+  padding: 24px 28px;
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.35s, background 0.35s, transform 0.4s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+.ref-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 8% 50%, rgba(241, 199, 91, 0.14), transparent 60%);
+  opacity: 0;
+  transition: opacity 0.4s;
+  pointer-events: none;
+}
+.ref-card:hover {
+  border-color: var(--glass-border-strong);
+  background: var(--glass-bg-hover);
+  transform: translateY(-2px);
+}
+.ref-card:hover::before { opacity: 1; }
+
+.ref-card .play-orb {
+  width: 64px;
+  height: 64px;
+  border: 1px solid rgba(241, 199, 91, 0.6);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background: rgba(0, 0, 0, 0.35);
+  transition: background 0.35s, border-color 0.35s;
+}
+.ref-card:hover .play-orb {
+  background: rgba(241, 199, 91, 0.12);
+  border-color: var(--gold-bright);
+}
+.ref-card .play-orb svg { width: 22px; height: 22px; }
+
+.ref-card .ref-meta { display: flex; flex-direction: column; gap: 4px; }
+.ref-card .ref-meta .kicker {
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+}
+.ref-card .ref-meta h3 {
+  font-size: 1.3rem;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+.ref-card .ref-meta p {
+  font-size: 0.92rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 4px;
+  line-height: 1.55;
+}
+.ref-card .ref-meta .en {
+  font-family: var(--font-serif);
+  font-style: italic;
+  color: var(--gold-bright);
+  font-size: 0.92rem;
+  display: block;
+}
+.ref-card .ref-arrow {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  color: var(--gold-bright);
+  transition: transform 0.4s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+.ref-card:hover .ref-arrow { transform: translate(6px, -4px); }
+
+@media (max-width: 640px) {
+  .ref-card {
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+    padding: 20px 22px;
+    gap: 16px;
+  }
+  .ref-card .ref-arrow { grid-column: 2; justify-self: end; font-size: 1rem; }
+  .ref-card .play-orb { width: 52px; height: 52px; }
+  .ref-card .ref-meta h3 { font-size: 1.1rem; }
+}
+
+/* ═══════════════════════════════════════════════════════
    📐 SPECIMEN — Museum diagram global overrides
    (Bumps label sizes so they read clearly across all pages)
    ═══════════════════════════════════════════════════════ */
